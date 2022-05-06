@@ -4,8 +4,8 @@ variables:
   IMAGE_NAME: rinz-comment-api
   CONTAINER_REPO_ASIA_STAG: 420811272222.dkr.ecr.ap-southeast-1.amazonaws.com/rinz-staging-ecr/comment-api
   CONTAINER_REPO_ASIA_PROD: 420811272222.dkr.ecr.ap-southeast-1.amazonaws.com/rinz-production-ecr/comment-api
-  NAMESPACE_STAG: rinz-api-stag
-  NAMESPACE_PROD: rinz-api-prod
+  NAMESPACE_STAG: api-stag
+  NAMESPACE_PROD: api-prod
   FULLREPO_ASIA_STAG: $CONTAINER_REPO_ASIA_STAG:$CI_COMMIT_SHORT_SHA
   FULLREPO_ASIA_PROD: $CONTAINER_REPO_ASIA_PROD:$CI_COMMIT_SHORT_SHA
   ENV_STAGING: $ENV_STAGING
