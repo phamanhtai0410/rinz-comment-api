@@ -123,7 +123,9 @@ deploy_stag:
   script:
     - *predeploy
     - *kubectl_config
-    - curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
+
+
+    - curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
     - curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v1.38.0/skaffold-linux-amd64 && chmod +x skaffold &&  mv skaffold /usr/local/bin
 
     - /usr/local/bin/skaffold deploy -p profile-stag   -a build.json
